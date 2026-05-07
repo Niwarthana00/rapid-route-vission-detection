@@ -1,0 +1,5 @@
+*.mp4
+*.pt
+roi_venv
+.venv
+__pycache__

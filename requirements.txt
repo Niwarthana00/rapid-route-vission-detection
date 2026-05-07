@@ -1,0 +1,4 @@
+ultralytics
+opencv-python
+lap>=0.5.12
+kafka-python>=2.0.2
