@@ -1,0 +1,14 @@
+services:
+  rapid-route-vission-detection:
+    build: .
+    container_name: rapid-route-vission-detection
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    environment:
+      BUS_ID: BUS-001
+      KAFKA_BROKER: host.docker.internal:9092
+      KAFKA_TOPIC: iot-telemetry
+      HEADLESS: "1"
+    volumes:
+      - ./:/app
+    command: ["--source", "video"]
